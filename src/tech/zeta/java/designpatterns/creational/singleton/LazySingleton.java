@@ -1,0 +1,17 @@
+package tech.zeta.java.designpatterns.creational.singleton;
+
+public class LazySingleton {
+    private static LazySingleton instance;
+
+    private LazySingleton(){
+        System.out.println("Lazy Singleton instance created");
+    }
+
+    public static LazySingleton getInstance(){
+        if (instance==null) instance=new LazySingleton();
+        return instance;
+    }
+    public  void businessLogic(){
+        System.out.println("Business logic goes here");
+    }
+}
